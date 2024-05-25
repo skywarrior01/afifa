@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amy</title>
+    <style type="text/css">
+        .main{
+            background: #C04848;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #480048, #C04848);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #480048, #C04848); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            width: 100%;
+            overflow-x: hidden;
+
+        }
+
+        .heading{
+            color:white;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        .image{
+            margin-top: 30px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            
+        
+        }
+        img{
+            border-radius: 30px;
+        }
+
+        .icon{
+            height: 100px;
+            width: 100vw;
+            margin-top: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        button{
+            height: 70px;
+            background-color: transparent;
+            border: none;
+            font-size: 50px;
+        }
+        p{
+            color: white;
+            font-size: 20px;
+        }
+        .flower{
+            /* display: none; */
+            position: absolute;
+            top: 0px;
+            height: 30px;
+        }
+        .flower1{
+            position: absolute;
+            height: 350px;
+            top: 490px;
+            transform: rotate(-30deg);
+            display: none;
+        }
+        .flower2{
+            position: absolute;
+            height: 350px;
+            top: 470px;
+            left: 20px;
+            transform: rotate(30deg);
+            display: none;
+        }
+    </style>
+</head>
+<body class="main">
+    <div class="heading"><h1>AFIFA</h1></div>
+    <div class="image"><img class="amyImage"src="./amy1.jpg" height="600px"> </div>
+    <div class="flower"><img class="flower1"src="flowers.gif" ></div>
+    <div class="flower"><img class="flower2"src="flowers.gif" ></div>
+    <div class="icon"><button onclick="handleclick()">❤️</button>
+        <p>click on heart to see magic</p>
+    </div>
+    
+</body>
+<script>
+    let amyImage = document.querySelector(".amyImage")
+    console.log(amyImage);
+    let flower1= document.querySelector(".flower1")
+    let flower2= document.querySelector(".flower2")
+    let p = document.querySelector("p")
+    console.log(flower1);
+    const handleclick=()=>{
+        console.log("i am clicked");
+        amyImage.src="./amy2.jpg"
+        p.innerText="wait"
+        setTimeout(()=>{
+            flower1.style.display="flex"
+            flower2.style.display="flex"
+            document.querySelector("h1").innerText="Flowers for you"
+            p.innerText="flowers for you SweetHeart"
+        },2000)
+
+
+    }
+
+</script>
+</html>
